@@ -9,7 +9,28 @@
     <h1>HTML Images</h1>
 
     <h2>Example</h2>
-    <img src="" alt="">
+    <img src="./assets/image.jpg">
+
+    <h2>Attributtes</h2>
+
+    <h3>The <code>alt</code> Attributte</h3>
+    <img src="./assets/image.jpg" alt="Kiz Kulesi">
+
+    <h3>The <code>width</code> <code>height</code> Attributte</h3>
+    <img src="./assets/image.jpg" width="450" height="300">
+    
+
+    <h3>The <code>srcset</code> Attributte</h3>
+    <img src="./assets/image.jpg" srcset="./assets/image.jpg, ./assets/image2.jpeg 2x">
+
+    <h3>The <code>loading</code> Attributte</h3>
+    <img src="" alt="./assets/image.jpg" loading="lazy">
+
+    <h3>The HTML <code>picture</code>Element</h3>
+    <picture>
+        <source srcset="./assets/image2.jpeg" type="image/jpeg" width="950"> 
+        <img src="./assets/image.jpg" width="650">
+    </picture>
     
 </body>
 </html>
