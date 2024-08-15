@@ -10,19 +10,23 @@
 
     <fieldset>
         <legend>Kişisel</legend>
+        <!--Kullanıcı ad ve soyad alır-->
         <div>
             <label for="fullname">İsim ve Soyisim:</label>
             <input type="text" id="fullname">
         </div>
+        <!--Kullanıcı cinsiyeti seçer-->
         <div>
             <label for="gender">Cinsiyetiniz:</label>
             <input type="radio" name="gender" value="male"> Erkek
             <input type="radio" name="gender" value="female"> Kadin
         </div>
+        <!--Kullanıcı e-postasını alır-->
         <div>
             <label for="email">E-posta:</label>
             <input type="email"  id="email">
         </div>
+        <!--Kullanıcıdan favori meyvesini seçmesi sağlanır-->
         <div>
             <label for="fruit">Favori Meyvaniz:</label>
             <select id="fruit">
@@ -32,14 +36,17 @@
                 <option value="watermelon">Karpuz</option>
             </select>
         </div>
+        <!--Kullanıcıdan şifre ister-->
         <div>
             <label for="password">Şifre:</label>
             <input type="password" id="password">
         </div>
+        <!--Kullanıcının mesajını alır-->
         <div>
             <label for="message">Mesajiniz:</label>
             <textarea id="message" placeholder="Mesajınız:" rows="5" cols="20"></textarea>
         </div>
+        <!--Kullanıcı verilerini gönderiri-->
         <div>
             <button type="submit">Gönder</button>
         </div>
