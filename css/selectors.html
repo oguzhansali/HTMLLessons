@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        .c1{
+            padding-left: 8px;
+            border-left: 5px solid orange;
+            background-color: beige;
+        }
+        /* c2 ve c3 classına sahip olanlara bunu uygula */
+        .c2.c3{
+            padding-left: 8px;
+            border-left: 5px solid orange;
+        }
+        .c2{
+            padding-left: 8px;
+            border-left: 5px solid darkblue;
+        }
+        /* c4 içindeki c5 classına bunu uygula */
+        .c4 .c5{
+            padding-left: 1px 3px;
+            border: 3px solid darkblue;
+        }
+        #paragraph{
+            padding-left: 8px;
+            border-left: 5px solid darkblue;
+        }
+        /*direk bir element de seçilerek still verilebilir */ 
+        h2{
+            padding-left: 8px;
+            border-left: 5px solid darkblue;
+        }
+        /*bir elemente ait bir classa still verilebilir */
+        p.c6{
+            padding-left: 8px;
+            border-left: 5px solid red;
+        }
+        /*bu durumda paragrap tagı içindeki markları alır */
+        p mark{
+            padding-left: 1px 3px;
+            border: 3px solid darkblue; 
+        }
+        /*bu durumda paragrap tagı içinde alt tagı mark olanları alır eğer başka bir tag içinde mark tagı var ise çalışmaz */
+        p > mark{
+            padding-left: 1px 3px;
+            border: 3px solid darkblue; 
+        }
+        [href="https://patika.dev"]{
+            padding-left: 5px;
+            border-left: 5px solid red; 
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors</h1>
+    <h2>.class</h2>
+    <p class="c1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, facere nisi! Nulla sunt dicta, aliquid cum odio facere magnam perspiciatis labore iure ad, id hic repellat, debitis fugiat repudiandae doloremque.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, adipisci officiis ex exercitationem neque, possimus et modi ratione id reiciendis recusandae consectetur quisquam commodi distinctio consequuntur odit, sit error fugiat.</p>
+
+    <h2>.class1.class2</h2>
+    <p class="c2 c3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur odio beatae veritatis? Aspernatur eius maiores, sapiente distinctio quod possimus hic quasi nemo voluptatem a repudiandae sequi laudantium odio inventore nulla.</p>
+    <p class="c2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis dicta mollitia cupiditate eius beatae, quisquam corrupti quibusdam, voluptatem eligendi facilis ipsa architecto laboriosam facere. Ducimus culpa corporis facere consequuntur facilis.</p>
+
+    <h2>.class1.class2</h2>
+    <p class="c4">Lorem ipsum dolor sit amet,<span class="c5">consectetur adipisicing elit</span> . Tempora veniam ut aut odit provident! Molestias vero dolorum dolor veniam ipsam expedita similique! Obcaecati soluta asperiores, sapiente hic odit atque ducimus?</p>
+    <!--Bu still almaz çünkü c4 içinde değil ayrı bir stil vermek gerekir c5 için-->
+    <span class="c5">consectetur adipisicing elit</span>
+
+
+    <h2>#id</h2>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dolor, eligendi! Porro voluptate reprehenderit non architecto laboriosam. Necessitatibus distinctio laboriosam illo, tempore, officiis nesciunt dolores amet quia voluptas quasi earum ea!</p>
+
+    <h2>Element.class</h2>
+    <p class="c6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga eum quidem molestiae, beatae rem perspiciatis quisquam aut fugiat nam repellendus aliquam facere aspernatur saepe ea rerum mollitia nostrum sequi dolor.</p>
+
+    <h2>element>element</h2>
+    <!--p mark için bu şekilde çalışır-->
+     <p><mark>Lorem, ipsum dolor sit amet consectetur adipisicing elit</mark>. Consequuntur beatae tenetur labore quo? Ipsam error corrupti culpa tempora voluptatibus dolore, ad aspernatur, aut nisi minus iure in aperiam, obcaecati id.</p>  
+     <!--p>mark işlemi bu şekilde olduğunda alt etiket span olduğu için çalışmaz-->
+     <p><span><mark>Lorem ipsum dolor sit amet consectetur</mark></span>, adipisicing elit. Quia ut maiores incidunt perspiciatis et in reprehenderit, consectetur officiis laboriosam inventore eveniet ipsam sunt quaerat, quidem voluptatum necessitatibus veritatis tenetur nobis!</p>
+
+     <h2>[attributes]</h2>
+     <p><a href="https://patika.dev">Patika</a></p>
+     <p><a href="https://apple.com">Apple</a></p>
+
+
+</body>
+</html>
