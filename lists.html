@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Lists</title>
+    <style>
+        .c1{
+            list-style-type: square;
+        }
+        .c2{
+            list-style-type: upper-roman ;
+        }
+        .c3{
+            padding-left: 0%;
+            list-style-position: inside;
+            background-color: bisque;
+        }
+        .c3 li{
+            margin-top: 2px;
+            background-color: lightgreen;
+        }
+        .c4{
+            background-color: bisque;
+        }
+        .c4 li{
+            margin-top: 2px;
+            background-color: lightgreen;
+        }
+    </style>
 </head>
 <body>
     <h1>HTML Lists</h1>
@@ -15,9 +39,20 @@
         <li>Yumurta</li>
         <li>Ekmek</li>
     </ul>
-
+    <ul class="c1">
+        <li>Elma</li>
+        <li>Süt</li>
+        <li>Yumurta</li>
+        <li>Ekmek</li>
+    </ul>
     <h2>Ordered List</h2>
     <ol>
+        <li>Postalarini kontrol et</li>
+        <li>İşine odaklan ve sorunlari çöz</li>
+        <li>Dinlen</li>
+        <li>Filtre Kahve hazirla</li>
+    </ol>
+    <ol class="c2">
         <li>Postalarini kontrol et</li>
         <li>İşine odaklan ve sorunlari çöz</li>
         <li>Dinlen</li>
@@ -33,6 +68,20 @@
         <dt>JavaScrip</dt>
         <dd>Web sayfalarına interaktif davranişlar eklemek için kullanilan programlaama dilidir.</dd>
     </dl>
+    <h2>CSS Lists</h2>
+    <h3>list-style-position</h3>
+    <ul class="c3">
+        <li>Elma</li>
+        <li>Süt</li>
+        <li>Yumurta</li>
+        <li>Ekmek</li>
+    </ul>
+    <ol class="c4">
+        <li>Postalarini kontrol et</li>
+        <li>İşine odaklan ve sorunlari çöz</li>
+        <li>Dinlen</li>
+        <li>Filtre Kahve hazirla</li>
+    </ol>
 
 </body>
 </html>
