@@ -1,12 +1,253 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Layout Display</title>
+    <style>
+        .display{
+            background-color: dodgerblue;
+        }
+        .inline{
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            display: inline;
+        }
+        .inline-block{
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .block{
+            height: 50px;
+            margin: 10px;
+            display: block;
+        }
+        .none{
+            display: none;
+        }
+        .hidden{
+            visibility: hidden;
+        }
+        .flex{
+            max-width: 500px;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            background-color: mediumpurple;
+        }
+        .flex div{
+            width: 75px;
+            font-size: 32px;
+            text-align: center;
+            line-height: 75px;
+            background-color: white;
+        }
+        .grid{
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            background-color: coral;
+        }
+        .grid div{
+            font-size: 32px;
+            text-align: center;
+            line-height: 75px;
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>CSS Layout Display</h1>
-    
+    <h1>CSS Display</h1>
+    <h2>display: inline</h2>
+    <p>Lorem ipsum dolor, <span class="display inline">sit</span> amet consectetur adipisicing elit. Sint provident beatae optio inventore reiciendis doloremque sunt corporis fugit voluptatem, aspernatur deserunt quidem tempore voluptas, minus cum eos a! Neque, harum.</p>
+    <h2>dispaly: inline-block</h2>
+    <p>Lorem ipsum dolor <span class="display inline-block">sit</span> amet consectetur adipisicing elit. Voluptas, nesciunt quasi consequuntur eligendi nulla numquam culpa itaque a quisquam provident est hic officia repudiandae enim doloremque facere animi pariatur explicabo!</p>
+    <h2>display: block</h2>
+    <p>Lorem ipsum dolor <span class="display block">sit</span> amet consectetur, adipisicing elit. Quos enim optio ducimus mollitia nihil vel fugiat consequuntur repellat, iure aspernatur adipisci. Velit, atque ipsam ipsum temporibus provident nostrum deserunt illo.</p>
+    <h2>display: none</h2>
+    <p>Lorem ipsum dolor <span class="display none">sit</span> amet consectetur, adipisicing elit. Quos enim optio ducimus mollitia nihil vel fugiat consequuntur repellat, iure aspernatur adipisci. Velit, atque ipsam ipsum temporibus provident nostrum deserunt illo.</p>
+    <!--visibility hidden o elemanı uzunluk ve yüksekliğini  tutarak saklar -->
+    <h2>visibility:hidden</h2>
+    <p>Lorem ipsum dolor <span class="display hidden">sit</span> amet consectetur, adipisicing elit. Quos enim optio ducimus mollitia nihil vel fugiat consequuntur repellat, iure aspernatur adipisci. Velit, atque ipsam ipsum temporibus provident nostrum deserunt illo.</p>
+    <h2>display: flex</h2>
+    <h3>Container</h3>
+    <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The flex-direction Property </h3>
+    <div class="flex" style="flex-direction: column;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The flex-wrap Property</h3>
+    <div class="flex" style="flex-wrap: wrap;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>    
+    </div>
+    <h3>The flex-direction Property </h3>
+    <div class="flex" style="justify-content: end;">  
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <!--align-content elemanın içeriğinin tamamını sıralıyor-->
+    <h3>The align-content Property </h3>
+    <div class="flex" style="height: 200px; flex-wrap:wrap; align-content:center;">  
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>         
+    </div>
+    <!--align-items her satırı kendi içinde gruplayarak hizalamaları kendi içinde yapıyor-->
+    <h3>The align-items Property </h3>
+    <div class="flex" style="height: 200px; align-items:center">  
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <!--elemanları istediğimiz gibi sıralamaya yarar-->
+    <h3>The order Property </h3>
+    <div class="flex">  
+        <div>1</div>
+        <div>2</div>
+        <div style="order: -1;">3</div>
+        <div>4</div>
+    </div>
+    <!--Defoult olanların alanları sabit kalır flex-grow verilen kısımlar diğer kalan tüm alanları alır-->
+    <h3>The flex-grow Property </h3>
+    <div class="flex">  
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-grow: 1;">3</div>
+        <div>4</div>
+    </div>
+    <!--istediğimiz bir elementin sıkıştırıpıl sıkıştırılmayacagına karar verıyor defaultu 1 dir-->
+    <h3>The flex-shrink Property </h3>
+    <div class="flex">  
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-shrink: 0; width:125px;">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>         
+    </div>  
+    <h3>The flex-basis Property </h3>
+    <div class="flex">  
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+    </div>
+    <br>
+    <div class="flex" style="flex-direction: column;">  
+        <div>1</div>
+        <div>2</div>
+        <div style="flex-basis: 200px;">3</div>
+        <div>4</div>
+    </div>
+    <!--elemanın kendisiyle alakalı dikeyde sıralama yapmasını sağlıyor-->
+    <h3>The align-self Property </h3>
+    <div class="flex" style="height:200px; align-items:start">  
+        <div>1</div>
+        <div>2</div>
+        <div style="align-self:center">3</div>
+        <div>4</div>
+    </div>
+    <h2>display:grid;</h2>
+    <h3>Container</h3>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <!--sutun ve satırlara böler-->
+    <h3>The grid-template-columns Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto 100px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <h3>The grid-template-rows Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto 100px; grid-template-rows:auto auto auto; ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+    <h3>The justify-content Property</h3>
+    <div class="grid" style="justify-content: center; grid-template-columns: 100px 100px 100px;">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h3>The align-content Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto; height:200px; align-content:center ">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <h3>The grid-column Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;">
+        <div style="grid-column: 1/span 2;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <h3>The grid-row Property</h3>
+    <div class="grid" style="grid-template-columns: auto auto auto;">
+        <div style="grid-row: 1 /span 2;">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>  
 </body>
 </html>
