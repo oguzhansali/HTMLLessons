@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms</title>
+    <style>
+        body{
+            padding: 50px;
+        }
+        .transform{
+            width: 150px;
+            height: 120px;
+            background-color: royalblue;
+        }
+        .translate{
+            transform: translate(100px, 50px);
+        }
+        /*scale e :hover eklenince  elemanın üzerine gelince verilen ayarlara büyür*/
+        .scale{
+            transform: scale(1.5, 1);
+        }
+        .rotate{
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!--diğer elementi itmeden kaydırma işlemi yapıldı-->
+    <h1>CSS Transforms</h1>
+    <h2>The translate() Method</h2>
+    <div class="transform translate"></div>
+    <br>
+    <div class="transform "></div>
+    <h2>The scale() Method</h2>
+    <div class="transform scale"></div>
+    <h2>The rotate() Method</h2>
+    <div class="transform rotate"></div>
+</body>
+</html>
