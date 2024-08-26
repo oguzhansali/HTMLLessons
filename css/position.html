@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS layout: The Position Property</title>
+    <style>
+        .position{
+            border: 5px solid peru;
+            background-color: white;
+        }
+        .position.relative{
+            position: relative;
+        }
+        .position.absolute{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .position.sticky{
+            border-color: aqua;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        .position.fixed{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            border-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS layout: The Position Property</h1>
+    <h2>position:static</h2>
+    <!--absolute bir üst element staticse onun üstüne çıkabilir-->
+    <div class="position">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae ducimus molestiae esse iste possimus iure adipisci fuga sapiente exercitationem, necessitatibus culpa, fugiat, quisquam laborum sequi dolorem? Mollitia, praesentium nisi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt enim ducimus odio iusto ea expedita molestiae nostrum aut nihil asperiores tempora, dolor excepturi sed nisi in saepe. Magnam, perferendis voluptate.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis itaque assumenda ex nihil minima voluptatem similique sapiente facilis deserunt quod, libero unde illum nulla quas in, dicta qui. Debitis, est.</p>
+    </div>
+    <!--absolute üzerindeki element relative ise onun istüne çıkamaz-->
+    <h2>position: relative</h2>
+    <div class="position relative">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fugit libero ratione neque unde dolorem vero nulla commodi maiores rerum aperiam non odio debitis sapiente atque, laudantium ad laborum maxime.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur modi, architecto obcaecati error ex vel sapiente reprehenderit pariatur sit facere praesentium culpa dolor tenetur quia nobis sequi voluptate quasi unde.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tempore quo sed? Nulla delectus totam consequuntur molestiae explicabo et velit aliquam temporibus? Debitis dolor, natus tempore ratione enim obcaecati animi.</p>
+    </div>
+    <h2>position: absolute</h2>
+    <div class="position relative">
+        <div class="position absolute">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odio iusto similique ratione quis culpa placeat dolorem expedita quas nemo ab, rerum dignissimos? Blanditiis quibusdam doloremque, nemo veniam nam labore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nesciunt quis magnam voluptatum illum eveniet quisquam, asperiores ab soluta, expedita eos, esse animi enim aliquid eligendi dolorem officia similique ut?</p>
+        </div>
+    </div>
+    <div class="position fixed">Bu bir sabit öğedir</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>position: sticky</h2>
+    <div class="position sticky">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla inventore dolores amet animi sit at voluptatibus aliquid numquam est dignissimos nemo consectetur, quasi architecto modi expedita alias eligendi rem quod!</p>
+    </div>
+    <div style="height: 100vh;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic voluptate animi, pariatur quis non minus aperiam soluta necessitatibus sed nihil error beatae natus laudantium reiciendis, a quo reprehenderit recusandae porro!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>            
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>            
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo molestiae, veritatis vero fuga commodi, alias eveniet repudiandae eius quos mollitia quas qui vel ipsum autem minus reprehenderit fugit, nam rerum.</p>
+    </div>
+</body>
+</html>
