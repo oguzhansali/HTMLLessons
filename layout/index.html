@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./griedview.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <header id="header">
+    <div class="container">
+        <div class="row center">
+            <div class="col-xs col-sm-3">
+                <img class="logo" src="https://placehold.co/100x38?text=Patika.dev" alt="Patika.dev Logo" width="100" height="38">
+            </div>
+            <div class="col-xs col-sm-9"></div>
+            <nav id="nav">
+                <a class="nav-item" href="#">Menu 1</a>
+                <a class="nav-item" href="#">Menu 2</a>
+                <a class="nav-item" href="#">Menu 3</a>
+                <a class="nav-item" href="#">Menu 4</a>
+                <a class="button" href="#">Button</a>
+            </nav>
+            <button id="mobile-menu-button" class="button">Menu</button>
+        </div>
+    </div>
+    <div id="mobile-menu" style="display: none;">
+        <a href="#">Menu 1</a>
+        <a href="#">Menu 2</a>
+        <a href="#">Menu 3</a>
+        <a href="#">Menu 4</a>     
+    </div>
+   </header>
+   <div class="hero">
+    <div class="row center">
+        <div class="col-xs-12 col-sm-6">
+            <div class="hero-caption">
+                <h1>Great design is invisiable</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a class="button" href="#">Call to Action</a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <img class="hero-image" src="https://placehold.co/750x550?text=(-_-)" alt="Hero İmage" width="750" height="550">
+        </div>
+    </div>
+   </div>
+   <section class="section white">
+    <h2 class="section-title">About Us</h2>
+    <div id="about">
+        <h4>Why our clients trust us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi rem voluptatem quibusdam asperiores suscipit necessitatibus quae magni, iste dignissimos, illum dolores ad aliquam voluptatibus odit vitae odio animi deleniti reiciendis!</p>
+    </div>
+   </section>
+   <section class="section">
+    <h2 class="section-title">Latest Blog</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <article class="blog">
+                    <img src="https://placehold.co/400x250?text=/" alt="Blog Image" width="400" height="250">
+                    <div class="blog-content">
+                        <h3>lorem ispum doler</h3>
+                        <p>Lorem ipsum dolor sit dsadsadsadsadss amet consectetur adipisicing elit. Ut id consectetur reiciendis sequi eos, error sapiente ad vitae pariatur voluptatum unde distinctio ipsa itaque ipsum, maiores sit quod similique natus?</p>
+                        <a class="button" href="#">Learn more</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <article class="blog">
+                    <img src="https://placehold.co/400x250?text=/" alt="Blog Image" width="400" height="250">
+                    <div class="blog-content">
+                        <h3>sit amet consectetur adipisicing elit</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni voluptates tempore quis quae modi. Sunt molestiae aspernatur officia, dolorum eaque, odit delectus animi eveniet minus iste quod illum itaque reiciendis.</p>
+                        <a class="button" href="#">Learn more</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <article class="blog">
+                    <img src="https://placehold.co/400x250?text=/" alt="Blog Image" width="400" height="250">
+                    <div class="blog-content">
+                        <h3>consectetur adipisicing elit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo repellat beatae autem. Quaerat quia omnis facere dolorem quod, in consectetur, perferendis architecto, sunt laboriosam ab! Voluptas vero inventore eum ad!</p>
+                        <a class="button" href="#">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+   </section>
+    <section class="section white">
+        <h2 class="section-title">Our Happy Client</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <article class="comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sint pariatur quasi dolorum fuga deleniti aliquam similique, voluptatem tenetur atque repudiandae accusamus! Animi iste neque a possimus similique illum temporibus.</p>
+                        <img src="https://placehold.co/50?text=JD" alt="Comment Image" width="50" height="50">
+                        <h3>Jhon Doe</h3>
+                    </article>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <article class="comment">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti enim est inventore, dolores iure, eveniet expedita neque cumque mollitia sunt aspernatur voluptatem beatae fuga laudantium ipsam aut laborum incidunt quaerat.</p>
+                        <img src="https://placehold.co/50?text=JW" alt="Comment Image" width="50" height="50">
+                        <h3>Julia Wet</h3>
+                    </article>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <footer id="footer"> &copy; 2024 Responsive Layout</footer>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function(){
+            var menu =document.getElementById('mobile-menu');
+
+            if(menu.style.display=='none'){
+                menu.style.display='block';
+            }else{
+                menu.style.display='none';
+            }
+        })
+    </script>
+</body>
+</html>
