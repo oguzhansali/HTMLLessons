@@ -1,0 +1,118 @@
+/*Genel Ayarlar*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+/* Tüm içeriği kapsayan bir flex container */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* Ana içerik alanı, geri kalan boşluğu doldurur */
+.content {
+    flex: 1; 
+    padding: 20px;
+}
+
+/* Header*/
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Navigasyon*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* post-container için flexbox düzeni */
+.post-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* post-summary */
+.post-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(50% - 40px);
+}
+
+.post-summary img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-summary h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Blog Gönderisi İçeriği */
+
+.post-content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.post-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-content p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Footer */
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border-radius: 5px 5px 0 0 ;
+}
