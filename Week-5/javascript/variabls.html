@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Scope</th>
+                <th>Redeclare</th>
+                <th>Reassign</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>var - </td>
+                <td>NO</td>
+                <td>YES</td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>let - </td>
+                <td>YES</td>
+                <td>NO</td>
+                <td>YES</td>
+            </tr>
+            <tr>
+                <td>const - </td>
+                <td>YES</td>
+                <td>NO</td>
+                <td>NO</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        /* DECLARING VARIABLES */
+        var x = 1;
+        let y = 2;
+        const z = 3; /*daha önce tanımlanmak zorunda*/
+        console.log(x,y,z)
+/*    gibi daha sonradan tanımlanabilir. 
+        var x;
+        let y;
+        if(age>18){
+            x='genç'
+        }else{
+            y='genç'
+        }*/
+
+        /*REDECLARED VERIABLES*/
+        var x = -1;/*tekrar atama yaparken sadece var atanabilir*/
+        console.log('redeclared x', x)
+
+        /*REASSIGN VERIABLES*/
+        x = 10;
+        y= 20;
+        console.log('reassign x, y', x,y)
+
+        const user = {
+            name:'Jhon',
+            age:'20'
+        };
+        user.name = 'Aras';
+        console.log('reassign user.name:',user)
+
+        /* VARIABLE SCOPE */
+
+        /*BLOCK SCOPE*/
+        /*Blok içinde tanımlanan değerler blok dışında kullanılamaz*/
+        {
+            let blockY=2;
+            let blockZ=3;
+            console.log('block scope y, z:',blockY,blockZ)
+        }
+
+        /*GLOBAL SCOPE*/
+        /*Global skop  blok dışında en başta tanımlanmış gibi davranır.*/
+        {
+            var globalX=1;
+            console.log('globalX',globalX)
+
+        }
+
+        /*FUNCTİON SCOPE*/
+        function example(){
+            var x =4;
+            let y = 5;
+            const z=6;
+            console.log('function scope', x,y,z)
+        }
+        example();
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
