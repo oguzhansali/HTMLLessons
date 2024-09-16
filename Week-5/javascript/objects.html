@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    <h1>JavaScript Objects</h1>
+    <script>
+        const user ={
+            name:'Jhon',
+            surname:'Doe',
+            age:22,
+            job:'Software Developer',
+            hobbies:['Running','Swimming','Tennis'],
+            admin:false,
+            fullname: function(){
+                return this.name + ' ' + this.surname;
+            }
+        }
+        user.country = 'USA';
+        //delete user.country;
+        
+        Object.assign(user,{//Var olan nesnenin içine ekleme yaptık
+            city:'New York'
+        })
+        
+        console.dir(user);
+        console.log('Object.keys()',Object.keys(user));
+        console.log('Object.values()',Object.values(user));
+        console.log('Object.entries()',Object.entries(user));
+        console.log('user.fullname()',user.fullname());
+
+        console.log('user.Name', user.name);
+    </script>
+</body>
+</html>
