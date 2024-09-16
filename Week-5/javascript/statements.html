@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+</head>
+<body>
+    <h1>JavaScript Conditional Statements</h1>
+    <script>
+        let x;
+
+         /* Comparison Operators*/
+        const age =18;
+        console.group('Comparison Operators');
+
+        x =  age >17 ? 'Değer Büyüktür.' : 'Değer Büyük Değildir.';
+        x =  age <17 ? 'Değer küçüktür.' : 'Değer küçük Değildir.';
+        console.log(x);
+        console.log(age == 17 ? 'Değer eşittir' : 'Değer eşit değildir.');
+        console.log(age === '17' ? 'Değer ve tür  eşittir' : 'Değer ve tür  eşit değildir.');
+        console.groupEnd(); 
+
+        /*Logical Operators*/
+        const visa  = true;
+        const permission = true;
+
+        console.log('Logical Operators');
+        if(visa){
+            if(age>=18 || permission){
+                console.log('Türkiyeye Hoşgeldiniz.')
+            }else{
+                console.log('Ebeveyniziniz izni olmadan Türkiy\'ye giremessiniz.')
+            }
+        }else{
+            console.log('Ülkeye giremezsiniz.')
+        }
+
+        if(visa && age >=18 || visa && permission){
+            console.log('Türkiyeye Hoşgeldiniz.')
+        }else if(visa && age <18 || visa && !permission){
+            console.log('Türkiyeye giremezsiniz.')
+        }
+        else{
+            console.log('Türkiyeye giremezsiniz.')
+        }
+        console.groupEnd();
+
+        /* If Statements*/
+        const score = 85;
+        if(score>=90){
+            console.log('Derece A');
+        }else if(score>=80){
+            console.log('Derece B');
+        }else if(score>=70){
+            console.log('Derece C');0
+        }else if(score>=60){
+            console.log('Derece D');
+        }else if(score>=50){
+            console.log('Derece E');
+        }else{
+            console.log('Derece F');
+        }
+
+        /*Switch Case Statements*/
+        const day = 3;
+        switch(day){
+            case 1:
+                console.log('Pazartesi');
+                break;
+            case 2:
+                console.log('Salı');
+                break;
+            case 3:
+                console.log('Salı');
+                break;
+            case 4:
+                console.log('Salı');
+                break;
+            case 5:
+                console.log('Salı');
+                break;
+            case 6:
+                console.log('Salı');
+                break;      
+            case 7:
+                console.log('Salı');
+                break;
+            default:
+                console.log('Geçersiz gün')
+                break;
+        }   
+
+        switch(day){
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                console.log('Haftaiçi');
+                break;
+            case 6:
+            case 7:
+                console.log('Hafta Sonu');
+            default:
+                console.log('Geçersiz gün')
+                break;
+        }
+
+        const color = 'red';
+
+        if(color == 'red'){
+            console.log('Dur');
+        }else if(color == 'yellow'){
+            console.log('Dikkat et');
+        }else if(color == 'green'){
+            console.log('Geç');
+        }else{
+            console.log('Bilinmeyen renk');
+        }
+
+        switch(color){
+            case 'red':
+                console.log('Dur');
+                break;
+            case 'yellow':
+                console.log('Dikkat et');
+                break;
+            case 'green':
+                console.log('Geç');
+                break;
+            default:
+                console.log('Bilinmeyen renk');
+                break;
+        }
+
+    </script>
+</body>
+</html>
