@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+<body>
+    <script>
+        let str = "Jhon's";
+        console.log(typeof str, str);
+
+        let int = 28;
+        console.log(typeof int, int);
+        
+        let bool = true;
+        console.log(typeof bool, bool);
+
+        let bigint = BigInt('23123123123124213132131231231231');
+        console.log(typeof bigint, bigint);
+        
+        let symbol = Symbol('Aras');
+        console.log(typeof symbol, symbol);
+    
+        let x;
+        console.log(typeof x, x);
+    
+        let y = null;
+        console.log(typeof y,y);
+        
+        let obj = {
+            name: 'Jhon',
+            age:'30',
+            admin:true,
+        };
+        console.log(typeof obj, obj);
+        
+        // Immutable
+        let name ='Jhon';
+        let clonedName=name;
+        clonedName = 'Aras';
+        console.log('immutable', name, clonedName)
+
+
+        //Mutable
+        let user={
+            name:'Jhon',
+        };
+        let cloneUser=user;
+        cloneUser.name='Aras';
+        console.log('mutable',user,cloneUser)
+    </script>    
+</body>
+</html>
