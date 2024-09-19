@@ -28,6 +28,10 @@
             throw new typeError('Custom TypeError');
         }
 
+        function emptyValue(){
+            throw new emptyValue(console.log('Boş Değer'));
+        }
+
         try{
             throw new Error('Custom Error');
         }catch (err){
@@ -39,7 +43,7 @@
 
         function validate(value){
             if(value.trim()== ''){
-                throw 'Boş Değer';
+                throw emptyValue();
             }else if(isNaN(value)){
                 throw 'Değer bir sayı olmalı';
             }else if(value<5){
