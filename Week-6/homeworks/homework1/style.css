@@ -1,0 +1,40 @@
+.head{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rebeccapurple;
+    text-align: center;
+}
+
+.form-color{
+    background-color: white;
+}
+
+.b-bg{
+    background-color: azure;
+}
+
+.form-container {
+    display: flex; /* Flexbox ile çocuk elemanları yan yana hizalar */
+    gap: 10px; /* İki eleman arasında boşluk bırakır */
+}
+
+.form-input {
+    flex: 1; /* Input alanını genişletir, böylece düğme ile birlikte düzgün bir hizalama sağlar */
+    padding: 10px; /* Input'un iç kenar boşluğu */
+}
+
+.btn {
+    padding: 10px 20px; /* Butona biraz iç boşluk ekler */
+    background-color: #007bff; /* Buton rengi (bootstrap rengini kullanabiliriz) */
+    color: white; /* Buton yazı rengi */
+    border: 50%;
+    cursor: pointer; /* Buton üzerine gelindiğinde fare işaretçisini değiştirir */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Üzerine gelindiğinde buton rengini değiştirir */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4)
+}
+
