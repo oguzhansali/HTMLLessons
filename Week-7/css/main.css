@@ -2,6 +2,7 @@
 @import './common.css';
 
 @import './layouts/header.css';
+@import './layouts/footer.css';
 
 @import 'sections/hero.css';
 @import 'sections/camera.css';
