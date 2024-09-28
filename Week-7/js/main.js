@@ -12,4 +12,18 @@
         }
             
     });
+
+    var photos = GLightbox({
+        selector: '#photos.photo'
+    });
+
+    var comment = new Swiper('#comments .swiper',{
+        pagination: {
+            el:'.swiper-pagination',
+            clickable:true,
+            type:'bullets',
+        }
+    });
+
+
 })();
